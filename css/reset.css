@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Post Reset CSS
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*/
+
+/* Box Model Hack */
+* {
+	box-sizing: border-box;
+}
+  
+  /* Clear fix hack */
+  .clearfix:after {
+	   content: ".";
+	   display: block;
+	   clear: both;
+	   visibility: hidden;
+	   line-height: 0;
+	   height: 0;
+}
+  
+  .clear {
+	  clear: both;
+}
+body {
+	background: rgb(248, 248, 248);
+	font-family: sans-serif;
+	margin: 0 10%;
+}
+html {
+	font-size: 62.5%;
+}
+img {
+	width: 100%;
+}
+.flex {
+	display: flex;
+}
+.grid {
+	display: grid;
+}
+
+main {
+	grid-template-columns: repeat(2, 50%);
+	grid-template-rows: minmax(50px, auto);
+	font-size: 4rem;
+	justify-items: center;
+	align-items: center;
+}
+main img {
+	width: 60%;
+	padding: 5% 0;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	justify-self: flex-end;
+}
+main img:first-of-type{
+	z-index: -1;
+	filter: saturate(0%);
+}
+main img:nth-of-type(2) {
+	width: 60%;
+}
+main img:last-of-type {
+	width: 60%;
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	justify-self: flex-start;
+	filter: saturate(0%);
+}
+
+
+.gallery{
+	background: grey;
+	grid-template-columns: repeat(3, 33.333%);
+	grid-template-rows: minmax(50px, auto);
+	flex-flow: row wrap;
+	align-items: center;
+}
+.gallery img:nth-of-type(4){
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 4;
+}
+.gallery img:nth-of-type(9){
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 4;
+	grid-row-end: 6;
+}
+.gallery img:nth-of-type(10){
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 6;
+	grid-row-end: 8;
+}
+.gallery img:nth-of-type(15){
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 8;
+	grid-row-end: 10;
+}
+.gallery section {
+	color: rgb(248, 248, 248);
+	width: 100%;
+	padding: 5%;
+	font-size: 1.5vh;
+}
+section a:link,
+section a:visited {
+	text-decoration: none;
+	color: orangered;
+}
+section a:hover {
+	cursor: pointer;
+	border-bottom: 2px solid;
+	padding: 0 0 .5% 0;
+}
